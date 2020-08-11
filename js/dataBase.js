@@ -23,9 +23,7 @@ const showList = (lists, day) => {
           id=${todo.doc.id}
           `+checked+`
         />
-        <label
-          class="list-item-info d-flex flex-column py-2 text-right"
-          for={props.id}>
+        <label class="list-item-info d-flex flex-column py-2 text-right" for=${todo.doc.id}>
           <span class="list-item-text">${data.text}</span>
           <span class="list-item-time text-right">${data.hour}:${data.minute}</span>
         </label>

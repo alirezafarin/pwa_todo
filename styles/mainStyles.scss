@@ -3,7 +3,7 @@
 
 body {
   direction: rtl;
-  font-family: 'IranianSansRegular'; 
+  font-family: 'IranianSansRegular';
 }
 
 #top-bar {
@@ -57,7 +57,6 @@ body {
 }
 
 #calender {
-  z-index: 5;
   @include background;
 }
 
@@ -86,18 +85,30 @@ body {
 }
 
 .day {
-  padding: 0 5px 0 5px; 
+  padding: 2px 1px 3px 5px;
+  height: 32px;
+  width: 32px; 
   margin: 5px 0 5px 0;
   border-radius: 50%;
   transition: all 0.5s ease;
+  z-index: 1;
 }
 
 .today {
   background-color: $light-light-purple;
+  color: white !important;
+}
+
+.selected-day-span {
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: white;
+  transition: all ease 0.5s;
 }
 
 .selected-day {
-  background-color: white;
   color: $dark-purple;
 }
 

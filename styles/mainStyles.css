@@ -58,7 +58,6 @@ body {
 }
 
 #calender {
-  z-index: 5;
   background: #956FDD;
   background: -webkit-gradient(linear, left bottom, left top, color-stop(7%, #956FDD), to(#CA7CEF));
   background: linear-gradient(0deg, #956FDD 7%, #CA7CEF 100%);
@@ -89,19 +88,32 @@ body {
 }
 
 .day {
-  padding: 0 5px 0 5px;
+  padding: 2px 1px 3px 5px;
+  height: 32px;
+  width: 32px;
   margin: 5px 0 5px 0;
   border-radius: 50%;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
+  z-index: 1;
 }
 
 .today {
   background-color: #A89EDD;
+  color: white !important;
+}
+
+.selected-day-span {
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: white;
+  -webkit-transition: all ease 0.5s;
+  transition: all ease 0.5s;
 }
 
 .selected-day {
-  background-color: white;
   color: #956FDD;
 }
 

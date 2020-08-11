@@ -40,11 +40,24 @@ $(function() {
     }
   }
 
+  const followAlongSpan = (selectedDay) => {
+    let coords = selectedDay.getBoundingClientRect();
+    let y = coords.top + window.scrollY;
+    let x = coords.left + window.scrollX;
+    $('.selected-day-span').css({
+      transform: `translate(${x}px, ${y}px)`,
+      height: "32px",
+      width: "32px"
+    });
+  } 
+
   //selectDay
   $('.day').click(function() {
     selectedDay = Number($(this).text());
     $('.selected-day').removeClass('selected-day');
     $(this).addClass('selected-day');
+    followAlongSpan($(this)[0]);
+    
     //show list for selected day
     showList(lists, selectedDay);
   });
