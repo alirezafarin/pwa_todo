@@ -1,0 +1,259 @@
+@import "colors";
+@import "mixins";
+
+body {
+  direction: rtl;
+  font-family: 'IranianSansRegular'; 
+}
+
+#top-bar {
+  z-index: 5;
+  padding: 5px;
+  background-color: $light-purple;
+}
+
+.bars-icon {
+  font-size: 25px;
+}
+
+.brand-name {
+  font-size: 30px;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  right: 0;
+  background-color: $dark-purple;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.open-sidenav {
+  width: 200px;
+}
+
+.side-brand-name {
+  padding: 8px 20px 8px 8px;
+  font-size: 40px;
+  color: white;
+  display: block;
+}
+
+.sidenav a {
+  @extend .side-brand-name;
+  text-decoration: none;
+  font-size: 20px;
+  text-align: right;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+#calender {
+  z-index: 5;
+  @include background;
+}
+
+.top-day {
+  font-size: 5rem;
+}
+
+.top-date {
+  font-size: 1.5rem;
+}
+
+.calender-bottom {
+  padding: 5px 12px 5px 12px;
+}
+
+.gone {
+  display: none !important;
+}
+
+.calender-bottom span {
+  font-size: 20px;
+}
+
+.week {
+  color: $light;
+}
+
+.day {
+  padding: 0 5px 0 5px; 
+  margin: 5px 0 5px 0;
+  border-radius: 50%;
+  transition: all 0.5s ease;
+}
+
+.today {
+  background-color: $light-light-purple;
+}
+
+.selected-day {
+  background-color: white;
+  color: $dark-purple;
+}
+
+.list-item {
+  border-color: $light-light-purple !important;
+}
+
+.checkbox {
+  position: relative;
+  width: 2em;
+  height: 2em;
+  color: $light-light-purple;
+  border: 1px solid $light-light-purple;
+  border-radius: 4px;
+  appearance: none;
+  outline: 0;
+  transition: all 175ms linear;
+  &::before {
+    position: absolute;
+    content: '';
+    display: block;
+    top: 3.5px;
+    left: 10px;
+    width: 10px;
+    height: 18px;
+    border-style: solid;
+    border-color: $light;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+    opacity: 0;
+  }
+  &:checked {
+    color: $light;
+    border-color: $dark-purple;
+    background: $dark-purple;
+    &::before {
+      opacity: 1;
+    }
+  }
+}
+
+label {
+  position: relative;
+  font-weight: 600;
+  padding: 0 1.3rem 0 0;
+  margin: 0;
+}
+
+label .list-item-text {
+  font-size: 1.5rem;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+label .list-item-time {
+  font-size: 1.2rem;
+  color: $light-black;
+}
+
+#add-to-list {
+  width: 100%;
+  padding: 2% 5% 0 5%;
+}
+
+#add-to-list input {
+  font-size: 17px;
+  border: 1px solid $light-light-purple;
+  border-radius: 0.4rem;
+}
+
+
+.add-icon {
+  color: $dark-purple;
+  opacity: 0.5;
+  font-size: 55px;
+  transition: all 0.5s ease;
+}
+
+.add-active {
+  opacity: 1;
+  transform: scale(1.3);
+}
+
+.delete-icon {
+  font-size: 30px;
+  padding-left: 10px;
+  margin-left: 20px;
+  color: $delete-red;
+  transition: all 0.5s ease;
+}
+
+.delete-clicked {
+  transform: scale(1.2);
+}
+
+.clock-arrow {
+  font-size: 25px;
+  color: $dark-purple;
+  text-align: center;
+  width: 50px;
+  border: 0.5px solid $light-purple;
+  border-radius: 0.5rem;
+  transition: all 0.5s ease;
+}
+
+.hour-now, .minute-now {
+  font-size: 27px;
+  color: $light-black;
+  transition: all 0.5s ease;
+}
+
+.selected-time {
+  color: rgba(0, 0, 0, 0.8);
+  transform: scale(1.2);
+}
+
+.clicked-arrow {
+  background-color: $light-purple;
+  color: white;
+}
+
+.modal {
+  display: none;
+  position: fixed; 
+  z-index: 200; 
+  padding-top: 100px; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.open-modal {
+  display: block !important;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 10px 20px 20px 20px;
+  border: 1px solid #888;
+  width: 500px;
+  height: auto;
+  margin: auto;
+}
+
+.add-button {
+  background-color: white;
+  width: 8rem;
+  color: $dark-purple;
+  border-color: $dark-purple !important;
+  border-radius: 0.4rem;
+}
+
+@media( max-width: 640px ) {
+  .modal-content {
+    width: 330px;
+  }
+}

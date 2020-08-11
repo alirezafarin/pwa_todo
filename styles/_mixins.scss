@@ -1,0 +1,4 @@
+@mixin background {
+  background: $dark-purple;
+  background: linear-gradient(0deg, $dark-purple 7%, $light-purple 100%);
+}
