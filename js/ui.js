@@ -57,7 +57,7 @@ $(function() {
     $('.selected-day').removeClass('selected-day');
     $(this).addClass('selected-day');
     followAlongSpan($(this)[0]);
-    
+
     //show list for selected day
     showList(lists, selectedDay);
   });
