@@ -302,6 +302,8 @@ label .list-item-time {
 .contact-form {
   background-color: rgba(0, 0, 0, 0.03);
   border-radius: 0.4rem;
+  -webkit-box-shadow: 2px 2px 8px grey;
+          box-shadow: 2px 2px 8px grey;
 }
 
 .form-title {
@@ -338,5 +340,6 @@ input::placeholder, textarea::placeholder {
 .back-to-home {
   height: 8%;
   font-size: 1.3rem !important;
+  z-index: 0 !important;
 }
 /*# sourceMappingURL=mainStyles.css.map */
