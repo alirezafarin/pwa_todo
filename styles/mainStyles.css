@@ -295,6 +295,10 @@ label .list-item-time {
   }
 }
 
+.contact-me-body {
+  min-height: 700px !important;
+}
+
 .contact-form {
   background-color: rgba(0, 0, 0, 0.03);
   border-radius: 0.4rem;
