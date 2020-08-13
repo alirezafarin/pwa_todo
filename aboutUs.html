@@ -14,7 +14,7 @@
   <script src="node_modules/persian-date/dist/persian-date.js" type="text/javascript"></script>
   <title>ToDo App</title>
 </head>
-<body class="contact-me-body h-100" >
+<body>
   <!-- Top Navbar -->
   <div id="top-bar" class="d-flex justify-content-between align-items-center text-light">
     <span class="bars-icon pr-2">
@@ -34,22 +34,21 @@
       </div>
     </nav>
   </div>
-
-  <!-- contact-form -->
-  <div class="contact-background h-75 d-flex align-items-center justify-content-center">
-    <form class="contact-form w-75 border px-2 mt-5 text-right">
-      <span class="form-title border-bottom d-block text-center pb-4 pt-2">فرم درخواست</span>
-      <input class="form-control my-2 mt-4" type="text" id="name" placeholder="نام">
-      <input class="form-control my-2" type="text" id="family" placeholder="نام خانوادگی">
-      <input class="form-control my-2" type="email" id="email" placeholder="ایمیل">
-      <textarea class="form-control my-2" id="message" rows="5" placeholder="پیام"></textarea>
-      <button class="btn w-100 my-3" type="submit">ارسال</button>
-    </form>
-
-    <!-- back to home button -->
-    <a href="index.html" class="back-to-home btn d-flex align-items-center justify-content-center rounded-0 fixed-bottom">بازگشت<i class="fas fa-arrow-left pr-2"></i></a>
+  
+  <!-- alerts -->
+  <div class="container">
+    <div class="feature alert alert-success text-center mt-5" role="alert">لورم ایپسوم متن ساختگی با تولید سادگی </div>
+    <div class="feature alert alert-primary text-center mt-2" role="alert">لبرای شرایط فعلی تکنولوژی مورد نیاز  </div>
+    <div class="feature alert alert-danger text-center mt-2" role="alert">لاساسا مورد استفاده قرار گیرد. و ج</div>
+    <div class="feature alert alert-warning text-center mt-2" role="alert">ن مورد نیاز شامل حروفچینی دستاوردها</div>
+    <div class="feature alert alert-secondary text-center mt-2" role="alert">لجوابگوی سوالات پیوسته اهل دنیای</div>
+    <div class="feature alert alert-dark text-center mt-2" role="alert">لا شناخت بیشتری را برای طراحان رایانه </div>
   </div>
 
+  <!-- back to home button -->
+  <a href="index.html" class="back-to-home btn d-flex align-items-center justify-content-center rounded-0 fixed-bottom">بازگشت<i class="fas fa-arrow-left pr-2"></i></a>
+
+  <script src="js/animation.js"></script>
   <script src="js/ui.js"></script>
 
 </body>

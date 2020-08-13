@@ -109,4 +109,8 @@ $(function() {
     checkToDo($(this).attr('id'), checked);
   });
 
+  // animation
+  const features = [ ...$('.feature') ];
+  animateOnAboutPage(features);
+
 });

@@ -341,5 +341,73 @@ input::placeholder, textarea::placeholder {
   height: 8%;
   font-size: 1.3rem !important;
   z-index: 0 !important;
+  background-color: #956FDD;
+  color: white !important;
+}
+
+.feature {
+  opacity: 0;
+}
+
+.slide-left {
+  -webkit-animation: slide-left 2s forwards;
+          animation: slide-left 2s forwards;
+}
+
+.slide-right {
+  -webkit-animation: slide-right 2s forwards;
+          animation: slide-right 2s forwards;
+}
+
+@-webkit-keyframes slide-left {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(30px);
+            transform: translateX(30px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+
+@keyframes slide-left {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(30px);
+            transform: translateX(30px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+
+@-webkit-keyframes slide-right {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-30px);
+            transform: translateX(-30px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+
+@keyframes slide-right {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-30px);
+            transform: translateX(-30px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
 }
 /*# sourceMappingURL=mainStyles.css.map */
