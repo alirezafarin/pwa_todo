@@ -5,7 +5,6 @@ const animateOnClick = (element, classToAdd) => {
 
 
 const animateOnAboutPage = (features) => {
-
   setTimeout(() => {
     $(features[0]).addClass('animate-in');
   }, 200);

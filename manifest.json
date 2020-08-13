@@ -1,0 +1,32 @@
+{
+  "name": "ToDo app",
+  "short_name": "TODO",
+  "icons": [
+    {
+      "src": "./icons/list.png",
+      "sizes": "64x64",
+      "type": "image/png"
+    },
+    {
+      "src": "./icons/list(1).png",
+      "type": "image/png",
+      "sizes": "128x128"
+    },
+    {
+      "src": "./icons/list(2).png",
+      "type": "image/png",
+      "sizes": "256x256"
+    },
+    {
+      "src": "./icons/clipboard.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/index.html",
+  "scope": ".",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#A89EDD",
+  "theme_color": "#956FDD"
+}
