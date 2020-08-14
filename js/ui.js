@@ -1,11 +1,11 @@
 let date = new persianDate();    
 let year = date.format('YYYY');
 let month = date.format('MMMM');
+let monthNumber = date.month();
 let day = date.calendar().day;
 let week = date.format('dddd');
-let dWeek = date.calendar().weekday;
+let weekNumber = date.calendar().weekday;
 let selectedDay;
-let weekDays = [ "جمعه", "پنج", "چهار", "سه", "دو", "یک", "شنبه" ];
 
 $(function() {
 
@@ -26,20 +26,6 @@ $(function() {
   $('.top-month').text(`${month} ${year}`);
   $('.top-day').text(day);
 
-  // FIXME:
-  //calendar bottom should show correct numbers for days > 31 and days < 1
-  let calItem = Array.from($('.calender-item'));
-  for( let i=1; i<=7; i++ ) {
-    let dayInMonth = day - ( dWeek - (i) );
-    dayInMonth = (dayInMonth <= 10) ? `0${dayInMonth}` : dayInMonth;  
-    $(calItem[i-1]).find('.day').text(dayInMonth);
-    $(calItem[i-1]).find('.week').text(weekDays[7-i]);
-
-    if( dayInMonth === day ) {
-      $(calItem[i-1]).find('.day').addClass('today');
-    }
-  }
-
   const followAlongSpan = (selectedDay) => {
     let coords = selectedDay.getBoundingClientRect();
     let y = coords.top + window.scrollY;
@@ -59,7 +45,7 @@ $(function() {
     followAlongSpan($(this)[0]);
 
     //show list for selected day
-    showList(lists, selectedDay);
+    // showList(lists, selectedDay);
   });
 
   // activate + sign when input:text inserted

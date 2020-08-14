@@ -7,7 +7,7 @@ html {
 
 body {
   direction: rtl;
-  font-family: "IranianSans" !important;
+  font-family: 'IranianSans', sans-serif !important;
 }
 
 #top-bar {
@@ -94,7 +94,7 @@ body {
 }
 
 .day {
-  padding: 1px 3px 1px 3px;
+  padding: 1px 3px 1px 4px;
   margin: 5px 0 5px 0;
   font-size: 20px !important;
   border-radius: 50%;
@@ -105,6 +105,8 @@ body {
 .today {
   background-color: $light-light-purple;
   color: white !important;
+  width: 32px;
+  height: 32px;
 }
 
 .selected-day-span {
