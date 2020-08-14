@@ -1,3 +1,12 @@
+let date = new persianDate();    
+let year = date.format('YYYY');
+let month = date.format('MMMM');
+let monthNumber = date.month();
+let day = date.calendar().day;
+let week = date.format('dddd');
+let weekNumber = date.calendar().weekday;
+let selectedDay;
+
 //calendar top
 $('.top-week').text(week);
 $('.top-month').text(`${month} ${year}`);

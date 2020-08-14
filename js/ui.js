@@ -1,12 +1,3 @@
-let date = new persianDate();    
-let year = date.format('YYYY');
-let month = date.format('MMMM');
-let monthNumber = date.month();
-let day = date.calendar().day;
-let week = date.format('dddd');
-let weekNumber = date.calendar().weekday;
-let selectedDay;
-
 $(function() {
 
   //open sideNav on bars icon click
@@ -19,33 +10,6 @@ $(function() {
     if( !$(e.target).closest('#side-nav')[0] && !$(e.target).hasClass('fa-bars') ) {
       $('#side-nav nav').removeClass('open-sidenav');
     }
-  });
-
-  //calendar top
-  $('.top-week').text(week);
-  $('.top-month').text(`${month} ${year}`);
-  $('.top-day').text(day);
-
-  const followAlongSpan = (selectedDay) => {
-    let coords = selectedDay.getBoundingClientRect();
-    let y = coords.top + window.scrollY;
-    let x = coords.left + window.scrollX;
-    $('.selected-day-span').css({
-      transform: `translate(${x}px, ${y}px)`,
-      height: "32px",
-      width: "32px"
-    });
-  } 
-
-  //selectDay
-  $('.day').click(function() {
-    selectedDay = Number($(this).text());
-    $('.selected-day').removeClass('selected-day');
-    $(this).addClass('selected-day');
-    followAlongSpan($(this)[0]);
-
-    //show list for selected day
-    // showList(lists, selectedDay);
   });
 
   // activate + sign when input:text inserted
