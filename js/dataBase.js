@@ -1,3 +1,17 @@
+firebase.firestore().enablePersistence()
+  .catch(function(err) {
+    console.log('presistance:', err);
+      if (err.code == 'failed-precondition') {
+          // Multiple tabs open, persistence can only be enabled
+          // in one tab at a a time.
+          // ...
+      } else if (err.code == 'unimplemented') {
+          // The current browser does not support all of the
+          // features required to enable persistence
+          // ...
+      }
+  });
+
 const sortOnTime = (lists) => {
   lists.sort((a, b) => {
     aData = a.doc.data();

@@ -1,5 +1,5 @@
-const STATIC_CACHE = 'static-v10';
-const DYNAMIC_CACHE = 'dynamic-v10';
+const STATIC_CACHE = 'static-v15';
+const DYNAMIC_CACHE = 'dynamic-v13';
 
 let assets = [
   '/',
@@ -59,7 +59,7 @@ self.addEventListener('activate', function(e) {
 //fetch Event
 self.addEventListener('fetch', function(e) {
   //don't cache anything from firebase firestore
-  if( e.request.url.indexOf('fire') === -1 ){
+  if( e.request.url.indexOf('firestore.googleapis.com') === -1 ){
     e.respondWith(
       caches.match(e.request).then((response) => {
         if( response ) {
@@ -70,7 +70,7 @@ self.addEventListener('fetch', function(e) {
           .then((res) => {
             //dynamic catching
             return caches.open(DYNAMIC_CACHE).then((cache) => {
-              cleanUpCache(DYNAMIC_CACHE, 6);
+              cleanUpCache(DYNAMIC_CACHE, 10);
               cache.put(e.request.url, res.clone());
               return res;
             });
