@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/mainStyles.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+    crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+    crossorigin="anonymous">
+    <link rel="stylesheet" href="css-persian-master/css/fonts.css">
+    <link rel="stylesheet" href="css-persian-master/css/fonts.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="node_modules/persian-date/dist/persian-date.js" type="text/javascript"></script>
+    <title>ToDo App</title>
+    <link rel="icon" href="./icons/list(2).png">
+    <link rel="manifest" href="./manifest.json">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#956FDD">
+    <meta name="apple-mobile-web-app-title" content="TODO">
+    <link rel="apple-touch-icon" href="./icons/list(2).png">
+    <meta name="msapplication-TitleImage" content="./icons/list(2).png">
+    <meta name="msapplication-TitleColor" content="#fff">
+    <meta name="theme-color" content="#956FDD">  
+  </head>
+<body>
+  <!-- Top Navbar -->
+  <div id="top-bar" class="d-flex justify-content-between align-items-center text-light">
+    <span class="bars-icon pr-2">
+      <i class="fas fa-bars"></i>
+    </span>
+    <span class="brand-name font-weight-bold pl-2">TODO</span>
+  </div>
+
+  <!-- Side Nav -->
+  <div id="side-nav">
+    <nav class="sidenav">
+      <span class="side-brand-name text-center mb-5">TO<span class="font-weight-bold">DO</span></span> 
+      <div class="page-links pt-3">
+        <a class="home-icon border-bottom border-top text-center" href="index.html"><i class="fas fa-home"></i></a>
+        <a class="border-bottom" href="/aboutUs.html">درباره ی ما</a>
+        <a class="border-bottom" href="/contact.html">ارتباط با ما</a>
+      </div>
+    </nav>
+  </div>
+
+  <div class="container">
+    <div class="offline text-center">
+      <span class="offline-icon d-block text-danger"><i class="far fa-frown"></i></span>
+      <span class="offline-message d-block mt-3 font-weight-bold text-dark">هم اکنون نمیتوانید به این صفحه دسترسی داشته باشید.</span>
+    </div>
+  </div>
+
+  <!-- back to home button -->
+  <a href="../index.html" class="back-to-home btn d-flex align-items-center justify-content-center rounded-0 fixed-bottom">بازگشت<i class="fas fa-arrow-left pr-2"></i></a>
+
+  <script src="js/app.js"></script>
+  <script src="js/animation.js"></script>
+  <script src="js/ui.js"></script>
+
+</body>
+</html>
