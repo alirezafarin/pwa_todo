@@ -381,4 +381,13 @@ input::placeholder, textarea::placeholder {
             transform: translateY(0px);
   }
 }
+
+.offline-icon {
+  margin-top: 5rem;
+  font-size: 9rem;
+}
+
+.offline-message {
+  font-size: 1.3rem;
+}
 /*# sourceMappingURL=mainStyles.css.map */
