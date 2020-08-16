@@ -9,7 +9,7 @@ let notificationPermisson;
 const displayNotification = () => {
   if( 'serviceWorker' in navigator && notificationPermisson ) {
     let option = {
-      body: $('#todo').val(),
+      body: 'اضافه شد',
       icon: '/icons/list(1).png',
       dir: 'rtl',
       vibrate: [200, 100, 200],
