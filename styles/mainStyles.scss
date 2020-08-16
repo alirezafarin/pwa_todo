@@ -344,7 +344,17 @@ input::placeholder, textarea::placeholder {
 
 #next, #last {
   font-size: 2rem;
-  padding: 10px;
+  padding: 7px 17px 7px 17px;
+  border-radius: 50%;
+}
+
+.animate-on-change {
+  animation: change-week 0.5s;
+}
+
+@keyframes change-week {
+  0% { background-color: rgba(255, 255, 255, 0.5);}
+  100% { background-color: none; }
 }
 
 .disable {

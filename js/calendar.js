@@ -100,6 +100,8 @@ $('#next, #last').click((e) => {
   let whichWeek = $(lastOrNextSpan).attr('id');
 
   if( !$(lastOrNextSpan).hasClass('disable') ) {
+    // animate on click
+    $(lastOrNextSpan).addClass('animate-on-change');
     disableChangeWeek(lastOrNextSpan);
     //empty todo list
     $('.list-items').empty();
@@ -120,3 +122,8 @@ $('#next, #last').click((e) => {
     }
   }
 });
+
+// remove animation on end
+$('#last, #next').on('animationend', () => {
+  $('.animate-on-change').removeClass('animate-on-change');
+})
