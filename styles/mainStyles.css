@@ -394,4 +394,13 @@ input::placeholder, textarea::placeholder {
 .notification {
   display: none !important;
 }
+
+#next, #last {
+  font-size: 2rem;
+  padding: 10px;
+}
+
+.disable {
+  opacity: 0.5 !important;
+}
 /*# sourceMappingURL=mainStyles.css.map */
