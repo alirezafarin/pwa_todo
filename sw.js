@@ -1,5 +1,5 @@
-const STATIC_CACHE = 'static-v15';
-const DYNAMIC_CACHE = 'dynamic-v13';
+const STATIC_CACHE = 'static-v11';
+const DYNAMIC_CACHE = 'dynamic-v14';
 
 let assets = [
   '/',
@@ -84,3 +84,19 @@ self.addEventListener('fetch', function(e) {
     );
   }
 })
+
+// self.addEventListener('notificationclick', (e) => {
+//   let notification = e.notification;
+//   let action = e.action;
+//   if( action === 'confirm' ) {
+//     console.log('Confirm');
+//     notification.close();
+//   }
+//   else {
+//     notification.close();
+//   }
+// });
+
+// self.addEventListener('notificationclose', (e) => {
+//   console.log('CLOSED', e);
+// })
