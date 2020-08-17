@@ -25,7 +25,7 @@ const showList = (lists, day) => {
 
   sortOnTime(lists);
 
-  lists.forEach((todo) => {
+  lists.forEach((todo, index) => {
     let data = todo.doc.data();
     let checked = (data.checked) ? 'checked' : '';
     if( data.dayInList === day) {
@@ -34,10 +34,10 @@ const showList = (lists, day) => {
         <input
           class="checkbox"
           type="checkbox"
-          id=${todo.doc.id}
+          id=${index}
           `+checked+`
         />
-        <label class="list-item-info d-flex flex-column py-2 text-right" for=${todo.doc.id}>
+        <label class="list-item-info d-flex flex-column py-2 text-right" for=${index}>
           <span class="list-item-text">${data.text}</span>
           <span class="list-item-time text-right">${data.hour}:${data.minute}</span>
         </label>

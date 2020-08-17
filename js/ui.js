@@ -56,7 +56,7 @@ $(function() {
     console.log($(this).attr('checked'));
     let checked = ($(this).attr('checked')) ? false : true;
 
-    checkToDo($(this).attr('id'), checked);
+    checkToDo($(this).closest('.list-item').attr('id'), checked);
   });
 
   // animation
