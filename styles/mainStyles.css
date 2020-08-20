@@ -5,6 +5,11 @@ html {
 body {
   direction: rtl;
   font-family: 'IranianSans', sans-serif !important;
+  max-width: 578px;
+  margin: auto !important;
+  border: solid 1px #CA7CEF;
+  height: 100%;
+  position: relative;
 }
 
 #top-bar {
@@ -28,7 +33,7 @@ body {
 .sidenav {
   height: 100%;
   width: 0;
-  position: fixed;
+  position: absolute;
   z-index: 10;
   top: 0;
   right: 0;
@@ -279,6 +284,7 @@ label .list-item-time {
   padding: 10px 20px 20px 20px;
   border: 1px solid #888;
   width: 500px;
+  max-width: 578px;
   height: auto;
   margin: auto;
 }
@@ -345,6 +351,8 @@ input::placeholder, textarea::placeholder {
   z-index: 0 !important;
   background-color: #956FDD;
   color: white !important;
+  max-width: 578px;
+  margin: auto;
 }
 
 .feature {
